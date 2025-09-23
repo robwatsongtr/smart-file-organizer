@@ -1,0 +1,154 @@
+.file-list {
+  margin-top: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+}
+
+.file-list-loading,
+.file-list-empty {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.file-list-header {
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+.file-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.file-list-content {
+  overflow-x: auto;
+}
+
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.file-table th {
+  background: #f8f9fa;
+  padding: 10px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+}
+
+.file-table th:first-child {
+  width: 40%;
+}
+
+.file-table th:nth-child(2) {
+  width: 20%;
+}
+
+.file-table th:nth-child(3) {
+  width: 20%;
+}
+
+.file-table th:nth-child(4) {
+  width: 20%;
+}
+
+.file-row {
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.file-row:hover {
+  background-color: #f8f9fa;
+}
+
+.file-row.directory {
+  font-weight: 500;
+}
+
+.file-row td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.file-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-icon {
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.file-type {
+  color: #666;
+  font-size: 14px;
+}
+
+.file-size {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #666;
+}
+
+.file-modified {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .file-list {
+    background: #1a1a1a;
+    border-color: #444;
+  }
+
+  .file-list-header {
+    background: #2a2a2a;
+    border-bottom-color: #444;
+  }
+
+  .file-table th {
+    background: #2a2a2a;
+    border-bottom-color: #444;
+    color: #f6f6f6;
+  }
+
+  .file-row {
+    border-bottom-color: #333;
+  }
+
+  .file-row:hover {
+    background-color: #2a2a2a;
+  }
+
+  .file-row td {
+    color: #f6f6f6;
+  }
+
+  .file-type,
+  .file-size,
+  .file-modified {
+    color: #ccc;
+  }
+
+  .file-count {
+    color: #ccc;
+  }
+
+  .file-list-loading,
+  .file-list-empty {
+    color: #ccc;
+  }
+}
