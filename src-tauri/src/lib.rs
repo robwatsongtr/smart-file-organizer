@@ -3,6 +3,9 @@ use std::path::Path;
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 
+// Practice module for learning exercises
+mod practice;
+
 // This is like a struct in C/C++, but with additional Rust features
 // The derives automatically implement serialization for JSON communication with frontend
 #[derive(Debug, Clone, Serialize, Deserialize)]
